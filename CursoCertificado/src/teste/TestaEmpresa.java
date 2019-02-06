@@ -10,27 +10,20 @@ public class TestaEmpresa {
 		empresa.empregados = new Funcionario[2];
 		
 		//se retirar essa linha abaixo onde tem a data, da nullpointexception
-		Data data = new Data();
+		Data data = new Data(21,01,2018);
 		Funcionario f1 = new Funcionario();
-		f1.nome = "Wesley";
-		f1.salario = 12000;
-		f1.dataDeEntrada = data;
-		f1.dataDeEntrada.dia=21;
-		f1.dataDeEntrada.mes=01;
-		f1.dataDeEntrada.ano=2018;
-		
+		f1.setNome("Wesley");
+		f1.setSalario(12000);
+		f1.setDataDeEntrada(data);
+
 		empresa.adiciona(f1);
 		
 		Funcionario f2 = new Funcionario();
-		f2.nome = "Elenita";
-		f2.salario = 22000;
-		Data data1= new Data();
-
-		f2.dataDeEntrada = data1;
-		f2.dataDeEntrada.dia=23;
-		f2.dataDeEntrada.mes=11;
-		f2.dataDeEntrada.ano=1991;
-
+		f2.setNome("Elenita");
+		f2.setSalario(22000);
+		Data data1= new Data(23,11,1991);
+		
+		f2.setDataDeEntrada(data1);
 		
 		empresa.adiciona(f2);
 		

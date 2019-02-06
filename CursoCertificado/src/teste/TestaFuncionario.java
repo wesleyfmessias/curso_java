@@ -8,19 +8,12 @@ public class TestaFuncionario {
 	public static void main(String[] args) {
 		Funcionario f1 = new Funcionario();
 		
-		Data data = new Data();
+		Data data = new Data(27,01,2019);
 	
-		f1.nome="Wesley";
-		f1.salario=12000;
+		f1.setNome("Wesley");
+		f1.setSalario(12000);
 		f1.recebeAumento(1000);
-		f1.dataDeEntrada = data;
-		f1.dataDeEntrada.dia=27;
-		f1.dataDeEntrada.mes=01;
-		f1.dataDeEntrada.ano=2019;
-		
-//		System.out.println("Salario atual:"+f1.salario);
-//		System.out.println("Ganho anual:"+f1.calculaGanhoAnual());
-//		System.out.println("Auxilio Moradia:"+f1.auxilioMoradia());
+		f1.setDataDeEntrada(data);
 		
 		f1.mostra();
 		
